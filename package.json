@@ -1,0 +1,21 @@
+{
+  "name": "nvoy-root",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "storybook": "npm run storybook --workspace=packages/react-sdk",
+    "base:build:watch": "npm run build:watch --workspace=packages/base",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "publish:base":"npm publish --access public -w packages/base",
+    "publish:react-sdk" : "npm publish --access public -w packages/react-sdk",
+    "version:prerelease:react-sdk": "npm version prerelease --workspace packages/react-sdk",
+    "version:prerelease:base": "npm version prerelease --workspace packages/base"
+  },
+  "author": "",
+  "license": "ISC",
+  "workspaces": [
+    "packages/base",
+    "packages/react-sdk"
+  ]
+}
